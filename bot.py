@@ -1,4 +1,4 @@
-from hikari import intents
+from hikari import intents, presences
 import lightbulb
 import secret
 import hikari
@@ -11,7 +11,7 @@ class L_Drago():
     
     def run():
         bot = lightbulb.Bot(prefix='1', token=secret.token, intents=hikari.Intents.ALL)
-        bot.run()
-        
+        bot.run(activity = hikari.Activity(name="Hentai", type=hikari.ActivityType.WATCHING),status=presences.Status.DO_NOT_DISTURB)
+
 L_Drago.run()
 
