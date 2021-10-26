@@ -1,4 +1,3 @@
-from hikari import intents, presences
 import lightbulb
 import secret
 import hikari
@@ -10,6 +9,5 @@ class L_Drago(lightbulb.Bot):
         super().__init__(token=secret.token, prefix='1')#token, prefix=prefix, insensitive_commands=insensitive_commands, ignore_bots=ignore_bots, owner_ids=owner_ids, help_class=help_class, delete_unbound_slash_commands=delete_unbound_slash_commands, recreate_changed_slash_commands=recreate_changed_slash_commands, slash_commands_only=slash_commands_only, default_enabled_guilds=default_enabled_guilds, **kwargs)
 
     
-
 L_Drago(token=secret.token)
 
