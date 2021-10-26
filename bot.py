@@ -1,12 +1,17 @@
+from hikari import intents
 import lightbulb
-from secret import token
+import secret
+import hikari
+from pathlib import Path
 
-bot = lightbulb.Bot(token=token, prefix='1')
+class L_Drago():
+    def __init__(self) -> None:
+        pass
 
+    
+    def run():
+        bot = lightbulb.Bot(prefix='1', token=secret.token, intents=hikari.Intents.ALL)
+        bot.run()
+        
+L_Drago.run()
 
-@bot.command()
-async def ping(ctx):
-    await ctx.respond("Pong!")
-
-
-bot.run()
