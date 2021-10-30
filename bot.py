@@ -1,3 +1,4 @@
+from hikari import presences
 import lightbulb
 import secret
 import hikari
@@ -21,7 +22,7 @@ bot = lightbulb.Bot(
 
 if __name__ == "__main__":
     bot.load_extensions_from('./coms/', must_exist=True)
-    bot.run()
+    bot.run(activity = hikari.Activity(name="Hentai", type=hikari.ActivityType.WATCHING), status=presences.Status.DO_NOT_DISTURB)
 
 
 
