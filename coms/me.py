@@ -6,7 +6,7 @@ import lightbulb
 
 
 
-class Me(lightbulb.SlashCommand):
+class me(lightbulb.SlashCommand):
     description: str = "Get info on a server member."
 
     target: typing.Optional[hikari.User] = lightbulb.Option("The member to get information about.")
@@ -63,4 +63,4 @@ class Me(lightbulb.SlashCommand):
 
 
 def load(bot: lightbulb.Bot) -> None:
-    bot.add_slash_command(Me)
+    bot.add_slash_command(me)
