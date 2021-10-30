@@ -6,7 +6,7 @@ import lightbulb
 
 
 
-class Userinfo(lightbulb.SlashCommand):
+class Me(lightbulb.SlashCommand):
     description: str = "Get info on a server member."
 
     target: typing.Optional[hikari.User] = lightbulb.Option("The member to get information about.")
@@ -28,7 +28,7 @@ class Userinfo(lightbulb.SlashCommand):
             hikari.Embed(
                 title=f"User Info - {target.display_name}",
                 description=f"ID: `{target.id}`",
-                colour=hikari.Colour(0x3B9DFF),
+                colour=hikari.Colour(0x5930D0),
                 timestamp=datetime.now().astimezone(),
             )
             .set_footer(
@@ -63,5 +63,4 @@ class Userinfo(lightbulb.SlashCommand):
 
 
 def load(bot: lightbulb.Bot) -> None:
-    bot.add_slash_command(Userinfo)
-    bot.load_extensions_from("./coms/", must_exist=True)
+    bot.add_slash_command(Me)
