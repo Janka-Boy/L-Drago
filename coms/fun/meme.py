@@ -10,11 +10,18 @@ class meme(lightbulb.SlashCommand):
         res = requests.get('https://meme-api.herokuapp.com/gimme/')
         print(res.json())
         meme = res.json()
+        url = meme['url']
+        title = meme['title']
+        author = meme['author']
+        subreddit = meme['subreddit']
 
-        hikari.Embed
+        meme_embed = hikari.Embed(description=f'Author: {author}',title=title)
+        meme_embed.set_image(url)
+        meme_embed.set_footer(text=f'From {subreddit} subreddit')
 
-        await ctx.respond('command worked')
-        await ctx.delete_response()
+        await ctx.respond(meme_embed)
+        
+        
         
 
 
