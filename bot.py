@@ -8,7 +8,7 @@ bot = lightbulb.Bot(
     token=secret.token,
     prefix="1",
     banner=None,
-    default_enabled_guilds=[727968616598864003, 804682325438627841], #888056300259401789],
+    default_enabled_guilds=[727968616598864003, 804682325438627841],# 888056300259401789], #888056300259401789],
     intents=hikari.Intents.ALL,
     ignore_bots=True,
 )
