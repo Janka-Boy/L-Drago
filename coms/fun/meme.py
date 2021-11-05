@@ -9,6 +9,7 @@ class meme(lightbulb.SlashCommand):
     async def callback(self, ctx: lightbulb.SlashCommandContext) -> None:
         res = requests.get('https://meme-api.herokuapp.com/gimme/')
         print(res)
+        pass
         
 
 
