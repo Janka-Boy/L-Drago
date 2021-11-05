@@ -1,11 +1,16 @@
+import re
 import hikari
 import lightbulb
 import requests
 
+
 class meme(lightbulb.SlashCommand):
     description: str = "This command does the magic"
     async def callback(self, ctx: lightbulb.SlashCommandContext) -> None:
-        pass
+        res = requests.get('https://meme-api.herokuapp.com/gimme/')
+        print(res)
+        
+
 
 
 
