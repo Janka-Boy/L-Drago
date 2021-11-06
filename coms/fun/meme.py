@@ -21,8 +21,8 @@ class meme(lightbulb.SlashCommand):
             if meme['code'] == 404:
                 return await ctx.respond('This subreddit does not exist.')
             else:
-                return
-                
+                return await ctx.respond('Something went wrong')
+
         url = meme['url']
         title = meme['title']
         author = meme['author']
