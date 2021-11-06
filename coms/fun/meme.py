@@ -7,8 +7,8 @@ import typing
 
 
 class meme(lightbulb.SlashCommand):
-    description: str = "This command does the magic"
-    subreddit: typing.Optional[str] = lightbulb.Option("Plz choose your subreddit", required=False)
+    description: str = "Getting memmes from subreddit"
+    subreddit: typing.Optional[str] = lightbulb.Option("plz choose your subreddit", required=False)
     async def callback(self, ctx: lightbulb.SlashCommandContext) -> None:
         if str(ctx.options.subreddit) != str:
             name = str(ctx.options.subreddit)
