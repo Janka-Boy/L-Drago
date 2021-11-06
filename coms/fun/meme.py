@@ -10,19 +10,19 @@ class meme(lightbulb.SlashCommand):
     description: str = "This command does the magic"
     subreddit: typing.Optional[str] = lightbulb.Option("Plz choose your subreddit", required=False)
     async def callback(self, ctx: lightbulb.SlashCommandContext) -> None:
-        print(type(ctx.options.subreddit))
         if str(ctx.options.subreddit) != str:
             name = str(ctx.options.subreddit)
             res = requests.get(f'https://meme-api.herokuapp.com/gimme/{name}')
         if ctx.options.subreddit == None:
             res = requests.get('https://meme-api.herokuapp.com/gimme/')
-
-        print(res.json())
         meme = res.json()
-        if meme['code'] == 404:
-            return await ctx.respond('This subreddit does not exist.')
-        else:
-            pass
+        #checking if meme dic containes 2 values in this case they are 404 error message
+        if len(meme) == 2:
+            if meme['code'] == 404:
+                return await ctx.respond('This subreddit does not exist.')
+            else:
+                return
+                
         url = meme['url']
         title = meme['title']
         author = meme['author']
