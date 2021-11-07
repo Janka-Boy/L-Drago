@@ -1,2 +1,3 @@
 # L-DragoV2
-Music bot made with hikari.py
+
+Trying to make my own music bot and learn python AT THE SAME TIME
