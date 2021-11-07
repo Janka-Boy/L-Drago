@@ -2,7 +2,6 @@ from hikari import presences
 import lightbulb
 import secret
 import hikari
-from pathlib import Path
 
 bot = lightbulb.Bot(
     token=secret.token,
