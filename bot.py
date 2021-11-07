@@ -12,11 +12,10 @@ bot = lightbulb.Bot(
     ignore_bots=True,
 )
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     bot.load_extensions_from('./coms/info/', must_exist=True)
     bot.load_extensions_from('./coms/fun/', must_exist=True)
     bot.load_extensions_from('./coms/dev/', must_exist=True)
-
     bot.run(activity = hikari.Activity(name="Hentai", type=hikari.ActivityType.WATCHING), status=presences.Status.DO_NOT_DISTURB)
 
 
