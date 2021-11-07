@@ -1,14 +1,12 @@
+#Did not make this command, thats sus
 from datetime import datetime
 import typing
-
 import hikari
 import lightbulb
 
 
-
 class me(lightbulb.SlashCommand):
     description: str = "Get info on a server member."
-
     target: typing.Optional[hikari.User] = lightbulb.Option("The member to get information about.")
 
     async def callback(self, ctx: lightbulb.SlashCommandContext) -> None:

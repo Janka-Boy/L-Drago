@@ -1,14 +1,12 @@
-
 import requests
 import hikari
 import lightbulb
 import typing
 
-
-
 class meme(lightbulb.SlashCommand):
-    description: str = "Getting memmes from subreddit"
+    description: str = "Getting memes from subreddit"
     subreddit: typing.Optional[str] = lightbulb.Option("plz choose your subreddit", required=False)
+    
     async def callback(self, ctx: lightbulb.SlashCommandContext) -> None:
         if str(ctx.options.subreddit) != str:
             name = str(ctx.options.subreddit)
@@ -16,10 +14,12 @@ class meme(lightbulb.SlashCommand):
         if ctx.options.subreddit == None:
             res = requests.get('https://meme-api.herokuapp.com/gimme/')
         meme = res.json()
-        #checking if meme dic containes 2 values in this case they are 404 error message
+
+        #checking if meme dic contains 2 values in this case they should be [404, error message]
         if len(meme) == 2:
             if meme['code'] == 404:
                 return await ctx.respond('This subreddit does not exist.')
+            #catches other errors
             else:
                 return await ctx.respond('Something went wrong')
 
@@ -34,7 +34,6 @@ class meme(lightbulb.SlashCommand):
 
         await ctx.respond(meme_embed)
         
-
 
 def load(bot: lightbulb.Bot) -> None:
     bot.add_slash_command(meme)

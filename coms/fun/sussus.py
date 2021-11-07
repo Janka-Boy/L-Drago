@@ -1,11 +1,10 @@
-import typing
+#Command made by my friend aka copy past my command and change discription
+#Test to learn ctx.respond() returning 2 embeds
 import hikari
 import lightbulb
 
 
-
 class sussus(lightbulb.SlashCommand):
-    
     description: str = "Have no idea wtf is this command"
     
     async def callback(self, ctx: lightbulb.SlashCommandContext) -> None:
