@@ -1,4 +1,5 @@
 secret.py
+.venv
 
 __pycache__/
 coms/info/__pycache__
