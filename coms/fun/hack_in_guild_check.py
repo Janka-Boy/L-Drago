@@ -1,7 +1,5 @@
 import hikari
 from hikari import permissions
-from hikari.channels import DMChannel
-from hikari.messages import Message
 import lightbulb
 import time
 from lightbulb.checks import bot_has_guild_permissions
