@@ -1,4 +1,3 @@
-
 import hikari
 from hikari import permissions
 from hikari.channels import DMChannel
