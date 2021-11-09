@@ -49,6 +49,20 @@ class warship(lightbulb.SlashCommand):
             await ctx.respond('warship2')
         ##########################################
         if str(ctx.options.warship) == 'warship3':
+            color = '#C727FF'
+            warship3 = (
+                hikari.Embed(
+                    title = 'Name: `USS New Jersey`',
+                    description = '**Description**\n `Iowa-class battleship`',
+                    color = color
+ 
+                )
+                .add_field(name='Laid down: ', value='`16 September 1940`')
+                .add_field(name='Lauched: ', value='`7 December 1942`')
+                .add_field(name='Commissioned: ', value='`23 May 1943`')
+                .add_field(name='Out of commission since: ',value='`8 February 1991`')
+                .set_image()
+            )
             await ctx.respond('warship3')
         ##########################################
         if str(ctx.options.warship) == 'warship4':
