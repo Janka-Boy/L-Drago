@@ -8,7 +8,7 @@ import typing
 
 class warship(lightbulb.SlashCommand):
     description: str = "Gives random warship from the list of warships"
-    warship: typing.Optional[str] = lightbulb.Option("warships", required=True, choices=['HMS Hood','KMS Bismarck','USS New Jersey','USS Enterprise','warship5','warship6',])
+    warship: typing.Optional[str] = lightbulb.Option("warships", required=True, choices=['HMS Hood','KMS Bismarck','USS New Jersey','USS Enterprise','IJN Shinano','IJN Yamato',])
     async def callback(self, ctx: lightbulb.SlashCommandContext) -> None:
         #checks if user has chosen any warship, choices of warships are choices[]
         if str(ctx.options.warship) == 'HMS Hood':
@@ -98,7 +98,7 @@ class warship(lightbulb.SlashCommand):
                 .add_field(name='Out of commission since: ',value='`29 November 1944`')
                 .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Japanese_aircraft_carrier_Shinano.jpg/300px-Japanese_aircraft_carrier_Shinano.jpg')
             )
-            await ctx.respond('warship5')
+            await ctx.respond(warship5)
         ##########################################
         if str(ctx.options.warship) == 'IJN Yamato':
             color = '#C727FF'
@@ -115,7 +115,7 @@ class warship(lightbulb.SlashCommand):
                 .add_field(name='Out of commission since: ',value='`7 April 1945`')
                 .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Japanese_battleship_Yamato_running_trials_off_Bungo_Strait%2C_20_October_1941.jpg/300px-Japanese_battleship_Yamato_running_trials_off_Bungo_Strait%2C_20_October_1941.jpg')
             )
-            await ctx.respond('warship6')
+            await ctx.respond(warship6)
         #need more warships just uncoment down or just copy paste new
         #elif str(ctx.options.warship) == 'warship7':
           #  await ctx.respond('warship1')
