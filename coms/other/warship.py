@@ -44,7 +44,7 @@ class warship(lightbulb.SlashCommand):
                 .add_field(name='Lauched: ', value='`14 February 1939`')
                 .add_field(name='Commissioned: ', value='`24 August 1940`')
                 .add_field(name='Out of commission since: ',value='`27 May 1941`')
-                .set_image()
+                .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Bundesarchiv_Bild_193-04-1-26%2C_Schlachtschiff_Bismarck.jpg/300px-Bundesarchiv_Bild_193-04-1-26%2C_Schlachtschiff_Bismarck.jpg')
             )
             await ctx.respond('warship2')
         ##########################################
@@ -53,7 +53,7 @@ class warship(lightbulb.SlashCommand):
             warship3 = (
                 hikari.Embed(
                     title = 'Name: `USS New Jersey`',
-                    description = '**Description**\n `Iowa-class battleship`',
+                    description = '**Description**\n `Iowa-class battleship. Since 1991 has been a museum ship.`',
                     color = color
  
                 )
@@ -61,11 +61,25 @@ class warship(lightbulb.SlashCommand):
                 .add_field(name='Lauched: ', value='`7 December 1942`')
                 .add_field(name='Commissioned: ', value='`23 May 1943`')
                 .add_field(name='Out of commission since: ',value='`8 February 1991`')
-                .set_image()
+                .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/New_Jersey_Sails.jpg/300px-New_Jersey_Sails.jpg')
             )
             await ctx.respond('warship3')
         ##########################################
         if str(ctx.options.warship) == 'warship4':
+            color = '#C727FF'
+            warship4 = (
+                hikari.Embed(
+                    title = 'Name: `USS Enterprise`',
+                    description = '**Description**\n `Yorktown-class aircraft carrier. She is the most decorated US ship of World War 2.`',
+                    color = color
+ 
+                )
+                .add_field(name='Laid down: ', value='`16 July 1934`')
+                .add_field(name='Lauched: ', value='`3 October 1936`')
+                .add_field(name='Commissioned: ', value='`12 May 1938`')
+                .add_field(name='Out of commission since: ',value='`17 February 1947`')
+                .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/USS_Enterprise_%28CV-6%29_in_Puget_Sound%2C_September_1945.jpg/300px-USS_Enterprise_%28CV-6%29_in_Puget_Sound%2C_September_1945.jpg')
+            )
             await ctx.respond('warship4')
         ##########################################
         if str(ctx.options.warship) == 'warship5':
