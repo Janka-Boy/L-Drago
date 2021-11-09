@@ -14,8 +14,8 @@ class warship(lightbulb.SlashCommand):
         if str(ctx.options.warship) == 'HMS Hood':
             #var arī taisīt jaunus variable un deklerēt vinūs piemēram pirms tu liec iekšā embed
             #kā piemēram ar krāsu es izdarīju, protams tas nav obligāti
-            color = '#C727FF'
             #There is better whey of making this, but of well not today, for today we are looking at an spageti code
+            color = '#C727FF'
             warship1 = (
                 hikari.Embed(
                     title= 'Name: `HMS Hood`',
@@ -23,10 +23,10 @@ class warship(lightbulb.SlashCommand):
                     color=color
 
                 )
-                .add_field(name='Laid down: ', value='`01/09/1916`')
-                .add_field(name='Lauched: ', value='`22/08/1918`')
-                .add_field(name='Commissioned: ', value='`15/05/1920`')
-                .add_field(name='Out of commission since: ',value='`24/05/1941`')
+                .add_field(name='Laid down: ', value='`1 September 1916`')
+                .add_field(name='Launched: ', value='`22 August 1918`')
+                .add_field(name='Commissioned: ', value='`15 May 1920`')
+                .add_field(name='Out of commission since: ',value='`24 May 1941`')
                 .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/HMS_Hood_%2851%29_-_March_17%2C_1924.jpg/300px-HMS_Hood_%2851%29_-_March_17%2C_1924.jpg')
             )
             await ctx.respond(warship1)
@@ -41,7 +41,7 @@ class warship(lightbulb.SlashCommand):
 
                 )
                 .add_field(name='Laid down: ', value='`1 July 1936`')
-                .add_field(name='Lauched: ', value='`14 February 1939`')
+                .add_field(name='Launched: ', value='`14 February 1939`')
                 .add_field(name='Commissioned: ', value='`24 August 1940`')
                 .add_field(name='Out of commission since: ',value='`27 May 1941`')
                 .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Bundesarchiv_Bild_193-04-1-26%2C_Schlachtschiff_Bismarck.jpg/300px-Bundesarchiv_Bild_193-04-1-26%2C_Schlachtschiff_Bismarck.jpg')
@@ -58,7 +58,7 @@ class warship(lightbulb.SlashCommand):
  
                 )
                 .add_field(name='Laid down: ', value='`16 September 1940`')
-                .add_field(name='Lauched: ', value='`7 December 1942`')
+                .add_field(name='Launched: ', value='`7 December 1942`')
                 .add_field(name='Commissioned: ', value='`23 May 1943`')
                 .add_field(name='Out of commission since: ',value='`8 February 1991`')
                 .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/New_Jersey_Sails.jpg/300px-New_Jersey_Sails.jpg')
@@ -75,7 +75,7 @@ class warship(lightbulb.SlashCommand):
  
                 )
                 .add_field(name='Laid down: ', value='`16 July 1934`')
-                .add_field(name='Lauched: ', value='`3 October 1936`')
+                .add_field(name='Launched: ', value='`3 October 1936`')
                 .add_field(name='Commissioned: ', value='`12 May 1938`')
                 .add_field(name='Out of commission since: ',value='`17 February 1947`')
                 .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/USS_Enterprise_%28CV-6%29_in_Puget_Sound%2C_September_1945.jpg/300px-USS_Enterprise_%28CV-6%29_in_Puget_Sound%2C_September_1945.jpg')
