@@ -53,7 +53,7 @@ class warship(lightbulb.SlashCommand):
             warship3 = (
                 hikari.Embed(
                     title = 'Name: `USS New Jersey`',
-                    description = '**Description**\n `Iowa-class battleship. Since 1991 has been a museum ship.`',
+                    description = '**Description:**\n `Iowa-class battleship. Since 1991 has been a museum ship.`',
                     color = color
  
                 )
@@ -70,7 +70,7 @@ class warship(lightbulb.SlashCommand):
             warship4 = (
                 hikari.Embed(
                     title = 'Name: `USS Enterprise`',
-                    description = '**Description**\n `Yorktown-class aircraft carrier. She is the most decorated US ship of World War 2.`',
+                    description = '**Description:**\n `Yorktown-class aircraft carrier. She is the most decorated US ship of World War 2.`',
                     color = color
  
                 )
@@ -87,7 +87,7 @@ class warship(lightbulb.SlashCommand):
             warship5 = (
                 hikari.Embed(
                     title = 'Name: `IJN Shinano`',
-                    description = '**Description**\n `Yamato-class aircraft carrier. Got sunk during her first sortie.`',
+                    description = '**Description:**\n `Yamato-class aircraft carrier. Got sunk during her first sortie.`',
                     color = color
  
                 )
@@ -105,7 +105,7 @@ class warship(lightbulb.SlashCommand):
             warship6 = (
                 hikari.Embed(
                     title = 'Name: `IJN Yamato`',
-                    description = '**Description**\n `Yamato-class battleship. The Japanese were so scared of losing her that she was never fully used until operation Ten-Go in which she was sunk.`',
+                    description = '**Description:**\n `Yamato-class battleship. The Japanese were so scared of losing her that she was never fully used until operation Ten-Go in which she was sunk.`',
                     color = color
  
                 )
