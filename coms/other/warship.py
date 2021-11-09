@@ -19,7 +19,7 @@ class warship(lightbulb.SlashCommand):
             warship1 = (
                 hikari.Embed(
                     title= 'Name: `HMS Hood`',
-                    description='**Description:**\n `[description about it]`',
+                    description='**Description:**\n `Admiral-class battlecruiser. HMS Hood was called the pride of the Royal naws due to her much better armament, protection and speed than any other British ship at that time.`',
                     color=color
 
                 )
@@ -32,6 +32,20 @@ class warship(lightbulb.SlashCommand):
             await ctx.respond(warship1)
         ##########################################
         if str(ctx.options.warship) == 'warship2':
+            color = '#C727FF'
+            warship2 = (
+                hikari.Embed(
+                    title = 'Name: `KMS Bismarck`',
+                    description = '**Description:**\n `Bismarck-class battleship`',
+                    color = color
+
+                )
+                .add_field(name='Laid down: ', value='`1 July 1936`')
+                .add_field(name='Lauched: ', value='`14 February 1939`')
+                .add_field(name='Commissioned: ', value='`24 August 1940`')
+                .add_field(name='Out of commission since: ',value='`27 May 1941`')
+                .set_image()
+            )
             await ctx.respond('warship2')
         ##########################################
         if str(ctx.options.warship) == 'warship3':
