@@ -93,7 +93,7 @@ class warship(lightbulb.SlashCommand):
                 )
                 .add_field(name='Laid down: ', value='`4 May 1940`')
                 .add_field(name='Launched: ', value='`8 October 1944`')
-                .add_field(name='compleated: ', value='`19 November 1944 (for trials)`')
+                .add_field(name='Compleated: ', value='`19 November 1944 (for trials)`')
                 .add_field(name='Commissioned: ', value='`Never`')
                 .add_field(name='Out of commission since: ',value='`29 November 1944`')
                 .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Japanese_aircraft_carrier_Shinano.jpg/300px-Japanese_aircraft_carrier_Shinano.jpg')
