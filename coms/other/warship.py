@@ -8,7 +8,7 @@ import typing
 
 class warship(lightbulb.SlashCommand):
     description: str = "Gives random warship from the list of warships"
-    warship: typing.Optional[str] = lightbulb.Option("warships", required=True, choices=['HMS Hood','warship2','warship3','warship4','warship5','warship6',])
+    warship: typing.Optional[str] = lightbulb.Option("warships", required=True, choices=['HMS Hood','KMS Bismarck','USS New Jersey','USS Enterprise','warship5','warship6',])
     async def callback(self, ctx: lightbulb.SlashCommandContext) -> None:
         #checks if user has chosen any warship, choices of warships are choices[]
         if str(ctx.options.warship) == 'HMS Hood':
@@ -31,7 +31,7 @@ class warship(lightbulb.SlashCommand):
             )
             await ctx.respond(warship1)
         ##########################################
-        if str(ctx.options.warship) == 'warship2':
+        if str(ctx.options.warship) == 'KMS Bismarck':
             color = '#C727FF'
             warship2 = (
                 hikari.Embed(
@@ -46,9 +46,9 @@ class warship(lightbulb.SlashCommand):
                 .add_field(name='Out of commission since: ',value='`27 May 1941`')
                 .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Bundesarchiv_Bild_193-04-1-26%2C_Schlachtschiff_Bismarck.jpg/300px-Bundesarchiv_Bild_193-04-1-26%2C_Schlachtschiff_Bismarck.jpg')
             )
-            await ctx.respond('warship2')
+            await ctx.respond(warship2)
         ##########################################
-        if str(ctx.options.warship) == 'warship3':
+        if str(ctx.options.warship) == 'USS New Jersey':
             color = '#C727FF'
             warship3 = (
                 hikari.Embed(
@@ -63,9 +63,9 @@ class warship(lightbulb.SlashCommand):
                 .add_field(name='Out of commission since: ',value='`8 February 1991`')
                 .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/New_Jersey_Sails.jpg/300px-New_Jersey_Sails.jpg')
             )
-            await ctx.respond('warship3')
+            await ctx.respond(warship3)
         ##########################################
-        if str(ctx.options.warship) == 'warship4':
+        if str(ctx.options.warship) == 'USS Enterprise':
             color = '#C727FF'
             warship4 = (
                 hikari.Embed(
@@ -80,7 +80,7 @@ class warship(lightbulb.SlashCommand):
                 .add_field(name='Out of commission since: ',value='`17 February 1947`')
                 .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/USS_Enterprise_%28CV-6%29_in_Puget_Sound%2C_September_1945.jpg/300px-USS_Enterprise_%28CV-6%29_in_Puget_Sound%2C_September_1945.jpg')
             )
-            await ctx.respond('warship4')
+            await ctx.respond(warship4)
         ##########################################
         if str(ctx.options.warship) == 'warship5':
             await ctx.respond('warship5')
