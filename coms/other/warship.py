@@ -82,10 +82,39 @@ class warship(lightbulb.SlashCommand):
             )
             await ctx.respond(warship4)
         ##########################################
-        if str(ctx.options.warship) == 'warship5':
+        if str(ctx.options.warship) == 'IJN Shinano':
+            color = '#C727FF'
+            warship5 = (
+                hikari.Embed(
+                    title = 'Name: `IJN Shinano`',
+                    description = '**Description**\n `Yamato-class aircraft carrier. Got sunk during her first sortie.`',
+                    color = color
+ 
+                )
+                .add_field(name='Laid down: ', value='`4 May 1940`')
+                .add_field(name='Launched: ', value='`8 October 1944`')
+                .add_field(name='compleated: ', value='`19 November 1944 (for trials)`')
+                .add_field(name='Commissioned: ', value='`Never`')
+                .add_field(name='Out of commission since: ',value='`29 November 1944`')
+                .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Japanese_aircraft_carrier_Shinano.jpg/300px-Japanese_aircraft_carrier_Shinano.jpg')
+            )
             await ctx.respond('warship5')
         ##########################################
-        if str(ctx.options.warship) == 'warship6':
+        if str(ctx.options.warship) == 'IJN Yamato':
+            color = '#C727FF'
+            warship6 = (
+                hikari.Embed(
+                    title = 'Name: `IJN Yamato`',
+                    description = '**Description**\n `Yamato-class battleship. The Japanese were so scared of losing her that she was never fully used until operation Ten-Go in which she was sunk.`',
+                    color = color
+ 
+                )
+                .add_field(name='Laid down: ', value='`4 November 1937`')
+                .add_field(name='Launched: ', value='`8 August 1940`')
+                .add_field(name='Commissioned: ', value='`16 December 1941`')
+                .add_field(name='Out of commission since: ',value='`7 April 1945`')
+                .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Japanese_battleship_Yamato_running_trials_off_Bungo_Strait%2C_20_October_1941.jpg/300px-Japanese_battleship_Yamato_running_trials_off_Bungo_Strait%2C_20_October_1941.jpg')
+            )
             await ctx.respond('warship6')
         #need more warships just uncoment down or just copy paste new
         #elif str(ctx.options.warship) == 'warship7':
