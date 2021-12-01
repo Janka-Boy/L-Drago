@@ -116,12 +116,6 @@ class warship(lightbulb.SlashCommand):
                 .set_image('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Japanese_battleship_Yamato_running_trials_off_Bungo_Strait%2C_20_October_1941.jpg/300px-Japanese_battleship_Yamato_running_trials_off_Bungo_Strait%2C_20_October_1941.jpg')
             )
             await ctx.respond(warship6)
-        #need more warships just uncoment down or just copy paste new
-        #elif str(ctx.options.warship) == 'warship7':
-          #  await ctx.respond('warship1')
-       #elif str(ctx.options.warship) == 'warship8':
-           # await ctx.respond('warship1')
-
 
 def load(bot: lightbulb.Bot) -> None:
     bot.add_slash_command(warship)
