@@ -1,4 +1,3 @@
-#Did not make this command, thats sus
 from datetime import datetime
 import typing
 import hikari
@@ -24,37 +23,18 @@ class me(lightbulb.SlashCommand):
 
         embed = (
             hikari.Embed(
-                title=f"User Info - {target.display_name}",
+                title=f"Nickname: {target.display_name}",
                 description=f"ID: `{target.id}`",
                 colour=hikari.Colour(0x5930D0),
                 timestamp=datetime.now().astimezone(),
             )
-            .set_footer(
-                text=f"Requested by {ctx.member.display_name}",
-                icon=ctx.member.avatar_url,
-            )
+            #Made this command a more compact 
+            .set_footer(text=f"Requested by {ctx.member.display_name}", icon=ctx.member.avatar_url)
             .set_thumbnail(target.avatar_url)
-            
-            .add_field(
-                name="Bot?", 
-                value=target.is_bot, 
-                inline=True
-            )
-            .add_field(
-                name="Created account on",
-                value=f"<t:{created_at}:d> (<t:{created_at}:R>)",
-                inline=True,
-            )
-            .add_field(
-                name="Joined server on",
-                value=f"<t:{joined_at}:d> (<t:{joined_at}:R>)",
-                inline=True,
-            )
-            .add_field(
-                name="Roles",
-                value=", ".join(r.mention for r in roles),
-                inline=False,
-            )
+            .add_field(name="Bot?", value=target.is_bot, inline=True)
+            .add_field(name="Created account on", value=f"<t:{created_at}:d> (<t:{created_at}:R>)", inline=True)
+            .add_field(name="Joined server on", value=f"<t:{joined_at}:d> (<t:{joined_at}:R>)", inline=True)
+            .add_field(name="Roles", value=", ".join(r.mention for r in roles),inline=False)
         )
 
         await ctx.respond(embed)
