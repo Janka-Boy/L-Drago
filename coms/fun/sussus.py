@@ -1,4 +1,4 @@
-#Command made by my friend aka copy past my command and change discription
+#Command made by my friend aka copy past my command and change description
 #Test to learn ctx.respond() returning 2 embeds
 import hikari
 import lightbulb
