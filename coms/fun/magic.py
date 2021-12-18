@@ -1,4 +1,4 @@
-#Unfinnished need more xp, leveling up
+#Unfinnished need more xp, leveling up...
 import hikari
 import lightbulb
 import lavasnek_rs as lava
