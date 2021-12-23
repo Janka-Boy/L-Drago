@@ -1,17 +1,32 @@
 #Command made by my friend aka copy past my command and change description
-#Test to learn ctx.respond() returning 2 embeds
+#Sus among us pam pam pam bum bum
+
 import hikari
 import lightbulb
-
+import requests
+import typing
 
 class sussus(lightbulb.SlashCommand):
-    description: str = "Have no idea wtf is this command"
+    description: str = "Returns sus among us memes and posts straight from AmongUs subreddit"
     
     async def callback(self, ctx: lightbulb.SlashCommandContext) -> None:
-        one_embed1 = hikari.Embed(description='**AAccording to all known laws of aviation, there is no way a bee should be able to fly...**', colour = "#5930D0")
-        one_embed2 = hikari.Embed(description='** **', colour = "#5930D0")
-        hikari.Embed.add_field(self=one_embed2,name='Its wings are too small to get its fat little body off the ground...', value="The bee, of course, flies anyway because bees don't care what humans think is impossible.", inline=True)#Inline for testing
-        await ctx.respond(embeds=[one_embed1, one_embed2])
+        if str(ctx.options.subreddit) != str:
+            name = str(ctx.options.subreddit)
+            res = requests.get(f'https://meme-api.herokuapp.com/gimme/AmongUs')
+        amongus = res.json()
+        among_image = amongus['url']
+        among_titles = amongus['title']
+        among_author = amongus['author']
+        among_ups = amongus['ups']
+        among_embed = hikari.Embed(
+            description=f'Author: {among_author}',
+            title=among_titles
+        )
+        among_embed.set_image(among_image)
+        among_embed.set_footer(text=f'👍{among_ups}')
+        print(amongus)
+        await ctx.respond(among_embed)
+
 
 def load(bot: lightbulb.Bot) -> None:
     bot.add_slash_command(sussus)
