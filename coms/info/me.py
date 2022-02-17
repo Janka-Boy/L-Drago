@@ -1,3 +1,4 @@
+
 from datetime import datetime
 import typing
 import hikari
@@ -28,7 +29,6 @@ class me(lightbulb.SlashCommand):
                 colour=hikari.Colour(0x5930D0),
                 timestamp=datetime.now().astimezone(),
             )
-            #Made this command a more compact 
             .set_footer(text=f"Requested by {ctx.member.display_name}", icon=ctx.member.avatar_url)
             .set_thumbnail(target.avatar_url)
             .add_field(name="Bot?", value=target.is_bot, inline=True)

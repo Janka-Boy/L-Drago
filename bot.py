@@ -17,7 +17,7 @@ if __name__ == '__main__':
     bot.load_extensions_from('./coms/fun/', must_exist=True)
     bot.load_extensions_from('./coms/dev/', must_exist=True)
     bot.load_extensions_from('./coms/other/', must_exist=True)  
-    bot.run(activity = hikari.Activity(name="Your server", type=hikari.ActivityType.WATCHING), status=presences.Status.DO_NOT_DISTURB)
+    bot.run(activity = hikari.Activity(name="your server", type=hikari.ActivityType.WATCHING), status=presences.Status.DO_NOT_DISTURB)
 
 
 

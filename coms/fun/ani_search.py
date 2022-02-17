@@ -1,6 +1,4 @@
-#Ok bruh this works but nex thing I need is error handeller bc this shit 
-#trows some nasty error when user makes typo
-
+#crashes bot
 import hikari
 import lightbulb
 import requests
@@ -15,17 +13,17 @@ class anime(lightbulb.SlashCommand):
         if str(ctx.options.anime) != str:
             name = str(ctx.options.anime)
             print(f'It did the thing {name}, also {type(name)}')
-
             res = requests.get(f'https://api.jikan.moe/v3/search/anime?q={name}')
+
         if ctx.options.anime == None:
             res = requests.get('https://api.jikan.moe/v3/search/anime?q=Gintama')
+
         anime = res.json()
-        print(anime)
         title = anime['results'][0]['title']
-        #print(title)
         image = anime['results'][0]['image_url']
         anime_embed = hikari.Embed(description=title)
         anime_embed.set_image(image)
+
         await ctx.respond(anime_embed)
 
 

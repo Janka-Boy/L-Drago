@@ -1,5 +1,3 @@
-#Command made by my friend aka copy past my command and change description
-#Sus among us pam pam pam bum bum
 
 import hikari
 import lightbulb
@@ -13,11 +11,13 @@ class sussus(lightbulb.SlashCommand):
         if str(ctx.options.subreddit) != str:
             name = str(ctx.options.subreddit)
             res = requests.get(f'https://meme-api.herokuapp.com/gimme/AmongUs')
+
         amongus = res.json()
         among_image = amongus['url']
         among_titles = amongus['title']
         among_author = amongus['author']
         among_ups = amongus['ups']
+        
         among_embed = hikari.Embed(
             description=f'Author: {among_author}',
             title=among_titles
@@ -25,6 +25,7 @@ class sussus(lightbulb.SlashCommand):
         among_embed.set_image(among_image)
         among_embed.set_footer(text=f'👍{among_ups}')
         print(amongus)
+
         await ctx.respond(among_embed)
 
 

@@ -2,7 +2,6 @@
 import hikari
 import lightbulb
 
-
 class info(lightbulb.SlashCommand):
     description: str = "Get info about bot"
 
@@ -19,7 +18,7 @@ class info(lightbulb.SlashCommand):
         """,
         colour='#5930D0', 
         title='**Bot creator: JanKa**')
-        #Maybe in future, was cringing too hard to include thumbnail info_embed.set_thumbnail('')
+
         hikari.Embed.set_footer(info_embed, text='Creator: JanKa#7069', icon='https://cdn.discordapp.com/attachments/906936324630667264/921801357017620500/discord_pfp.png')
 
         await ctx.respond(info_embed)

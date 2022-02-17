@@ -13,13 +13,12 @@ class meme(lightbulb.SlashCommand):
             res = requests.get(f'https://meme-api.herokuapp.com/gimme/{name}')
         if ctx.options.subreddit == None:
             res = requests.get('https://meme-api.herokuapp.com/gimme/')
+
         meme = res.json()
 
-        #checking if meme dic contains 2 values in this case they should be [404, error message]
         if len(meme) == 2:
             if meme['code'] == 404:
                 return await ctx.respond('This subreddit does not exist.')
-            #catches other errors
             else:
                 return await ctx.respond('Something went wrong')
 
