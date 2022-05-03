@@ -1,4 +1,5 @@
-# L-DragoV2 | Development closed 🟥
+# L-DragoV2 | Development closed
+🟥
 
 Trying to make my own music bot and learn python
 
