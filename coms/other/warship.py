@@ -8,7 +8,7 @@ import typing
 
 class warship(lightbulb.SlashCommand):
     description: str = "Gives random warship from the list of warships"
-    warship: typing.Optional[str] = lightbulb.Option("warships", required=True, choices=['HMS Hood','KMS Bismarck','USS New Jersey','USS Enterprise','IJN Shinano','IJN Yamato',])
+    #warship: typing.Optional[str] = lightbulb.Option("warships", required=True, choices=['HMS Hood','KMS Bismarck','USS New Jersey','USS Enterprise','IJN Shinano','IJN Yamato',])
     async def callback(self, ctx: lightbulb.SlashCommandContext) -> None:
         #checks if user has chosen any warship, choices of warships are choices[]
         if str(ctx.options.warship) == 'HMS Hood':

@@ -3,6 +3,7 @@ import secret
 import hikari
 from hikari import presences
 
+
 bot = lightbulb.Bot(
     token=secret.token,
     prefix="1",
